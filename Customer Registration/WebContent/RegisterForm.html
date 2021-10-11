@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<form novalidate class="signup-form" id="form" autocomplete="off" action="register" method="post">
+	<form novalidate class="signup-form" id="form" autocomplete="off" action="Process.jsp" method="post">
 		<!-- form header -->
 		<div class="form-header">
 			<h1>Create Account</h1>
@@ -19,16 +19,18 @@
 				<div class="left-group">
 					<label for="firstname" class="label-title">First name *</label>
 					<input type="text" id="firstname" name="fname" class="form-input" placeholder="Enter your first name">
+					<span class="error" aria-live="polite"></span>
 				</div>
 				<div class="right-group">
 					<label for="lastname" class="label-title">Last name *</label>
-					<input type="text" id="lastname" class="form-input" placeholder="Enter your last name">
+					<input type="text" id="lastname" name="lastname" class="form-input" placeholder="Enter your last name" >
+					<span class="error" aria-live="polite"></span>
 				</div>
 			</div>
 			<!-- Address -->
 			<div class="form-group">
 				<label for="address" class="label-title" style="float:left;">Address</label>
-				<input type="text" id="location" class="form-input" placeholder="Address">
+				<input type="text" id="location" name="address" class="form-input" placeholder="Address">
 			</div>
 			
 			<!-- City, State, Country and PinCode-->
@@ -36,13 +38,13 @@
 				<div class="left-group">
 					<div class="form-group">
 						<label for="city" class="label-title">City</label>
-						<input type="text" id="city" class="form-input" placeholder="City">
+						<input type="text" id="city" name="city" class="form-input" placeholder="City">
 					</div>
 				</div>
 				<div class="right-group">
 					<div class="form-group">
 						<label for="state" class="label-title">State</label>
-						<input type="text" id="state" class="form-input" placeholder="State">
+						<input type="text" id="state" name="state" class="form-input" placeholder="State">
 					</div>
 				</div>
 			</div>
@@ -50,13 +52,15 @@
 				<div class="left-group">
 					<div class="form-group">
 						<label for="country" class="label-title">Country</label><br/>
-						<input class="form-input" id="myInput" type="text" name="myCountry" placeholder="Country">
+						<div class="autocomplete">
+							<input class="form-input" id="myInput" name="country" type="text" placeholder="Country">
+  						</div>
 					</div>
 				</div>
 				<div class="right-group">
 					<div class="form-group">
 						<label for="pincode" class="label-title">PinCode</label>
-						<input type="text" id="pincode" class="form-input" placeholder="PinCode">
+						<input type="number" id="pincode" name="zip" class="form-input" placeholder="PinCode">
 					</div>
 				</div>
 			</div>
@@ -64,24 +68,28 @@
 			<!-- Phone number -->
 			<div class="form-group">
 				<label for="phone" class="label-title">Mobile No.*</label>
-				<input type="tel" pattern="[789][0-9]{9}" id="phone" class="form-input" placeholder="Phone Number" >
+				<input type="tel" pattern="[789][0-9]{9}" id="phone" name="phone" class="form-input" placeholder="Phone Number" >
+				<span class="error" aria-live="polite"></span>
 			</div>
 			
-			<!-- User Id -->
+			<!-- Email -->
 			<div class="form-group">
-				<label for="userId" class="label-title">User Id*</label>
-				<input type="email" id="email" class="form-input" placeholder="Enter your User Id">
+				<label for="email" class="label-title">Email *</label>
+				<input type="email" id="email" class="form-input" name="email" placeholder="Enter your email Id">
+				<span class="error" aria-live="polite"></span>
 			</div>
 			
 			<!-- Password -->
 			<div class="horizontal-group">
 				<div class="left-group">
 					<label for="password" class="label-title">Password *</label>
-					<input type="password" id="password" class="form-input" placeholder="Enter your password" >
+					<input type="password" id="password" class="form-input" name="password" placeholder="Enter your password" >
+					<span class="error" aria-live="polite"></span>
 				</div>
 				<div class="right-group">
 					<label for="confirm-password" class="label-title">Confirm Password *</label>
-					<input type="password" id="confirm-password" class="form-input" placeholder="Enter your password again" >
+					<input type="password" id="confirm-password" class="form-input" name="confirm-password" placeholder="Enter your password again" >
+					<span class="error" aria-live="polite"></span>
 				</div>		
 				
 			</div>
