@@ -1,0 +1,18 @@
+create domain phone_number as text check( value ~ '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$');
+CREATE TABLE party(
+	partyId int PRIMARY KEY,
+	firstname VARCHAR ( 50 ) NOT NULL,
+	lastname VARCHAR ( 50 ) NOT NULL,
+	address varchar(500),
+	city varchar(50),
+	zip int,
+	country varchar(50),
+	state varchar(50),
+	phone phone_number
+);
+CREATE TABLE UserLogin(
+	userLoginId varchar(255) primary key,
+	password varchar(50),
+	partyId int,
+	foreign key (partyId) references party(partyId)
+);
