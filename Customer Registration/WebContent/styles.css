@@ -1,0 +1,215 @@
+@import url('httpss://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	background: linear-gradient(to right, #78a7ba 0%, #385D6C 50%,#78a7ba 99%);
+}
+
+.signup-form{
+	font-family: "Roboto", sans-serif;
+  	width:650px;
+  	margin:30px auto;
+  	background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  	border-radius: 10px;
+}
+
+.form-header  {
+  background-color: #EFF0F1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  text-align:center;
+  color:#666;
+  padding:20px 0;
+  border-bottom:1px solid #cccccc;
+}
+
+/*---------------------------------------*/
+/* Form Body */
+/*---------------------------------------*/
+.form-body {
+  padding:10px 40px;
+  color:#666;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-body .label-title {
+  color:#1BBA93;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+
+
+
+.horizontal-group .left-group{
+  float:left;
+  width:49%;
+  margin-bottom:20px;
+}
+
+.horizontal-group .right-group{
+  float:right;
+  width:49%;
+  margin-bottom:20px;
+}
+
+input[type="file"] {
+ outline: none;
+ cursor:pointer;
+ font-size: 17px;
+}
+
+#range-label {
+ width:15%;
+ padding:5px;
+ background-color: #1BBA93;
+ color:white;
+ border-radius: 5px;
+ font-size: 17px;
+ position: relative;
+ top:-8px;
+}
+
+
+::-webkit-input-placeholder {
+ color:#d9d9d9;
+}
+
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.form-footer {
+ clear:both;
+}
+
+
+.signup-form .form-footer  {
+  background-color: #EFF0F1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:10px 40px;
+  text-align: right;
+  border-top: 1px solid #cccccc;
+  margin-top:10px;
+}
+
+.form-footer span {
+  float:left;
+  margin-top: 10px;
+  color:#999;  
+  font-style: italic;
+  font-weight: thin;
+}
+
+.btn {
+   display:inline-block;
+   padding:10px 20px;
+   background-color: #1BBA93;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#bcf5e7;
+   cursor:pointer;
+}
+td .btn{
+	padding:3px 7px;
+}
+.btn:hover {
+  background-color: #169c7b;
+  color:white;
+}
+
+input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+.error {
+  width  : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: red;
+
+}
+
+.error.active {
+  display:none;
+}
+
+.centered{
+ position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+}
+#header button, [type="text"]{
+   position: relative;
+  height: 5vh;
+  font-size: 5vh;
+  border: none;
+  bottom: 0;
+}
+#header button{
+  width: 10%;
+  right: 0;
+  color: #fff;
+  background: #FF9700;
+  cursor: pointer;
+  left:90;
+}
+#header [type='text']{
+  background: #fff;
+  bottom: 0;
+  width: 60%;
+  color: #777675;
+  padding-left: 20px;
+  padding-right: 20px;
+  top:10;
+  left:100;
+}
+
+.table{
+	border:"1";
+	width:1030;
+    margin-top:100;
+    margin-left:200;
+    border-collapse: collapse; 
+}
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<form novalidate class="signup-form" id="form" autocomplete="off" action="Process.jsp" method="post">
+		<!-- form header -->
+		<div class="form-header">
+			<h1>Create Account</h1>
+		</div>
+		
+		<!-- form body -->
+		<div class="form-body">
+			<!-- FirstName LastName -->
+			<div class="horizontal-group">
+				<div class="left-group">
+					<label for="firstname" class="label-title">First name *</label>
+					<input type="text" id="firstname" name="fname" class="form-input" placeholder="Enter your first name">
+					<span class="error" aria-live="polite"></span>
+				</div>
+				<div class="right-group">
+					<label for="lastname" class="label-title">Last name *</label>
+					<input type="text" id="lastname" name="lastname" class="form-input" placeholder="Enter your last name" >
+					<span class="error" aria-live="polite"></span>
+				</div>
+			</div>
+			<!-- Address -->
+			<div class="form-group">
+				<label for="address" class="label-title" style="float:left;">Address</label>
+				<input type="text" id="location" name="address" class="form-input" placeholder="Address">
+			</div>
+			
+			<!-- City, State, Country and PinCode-->
+			<div class="horizontal-group">
+				<div class="left-group">
+					<div class="form-group">
+						<label for="city" class="label-title">City</label>
+						<input type="text" id="city" name="city" class="form-input" placeholder="City">
+					</div>
+				</div>
+				<div class="right-group">
+					<div class="form-group">
+						<label for="state" class="label-title">State</label>
+						<input type="text" id="state" name="state" class="form-input" placeholder="State">
+					</div>
+				</div>
+			</div>
+			<div class="horizontal-group">
+				<div class="left-group">
+					<div class="form-group">
+						<label for="country" class="label-title">Country</label><br/>
+						<div class="autocomplete">
+							<input class="form-input" id="myInput" name="country" type="text" placeholder="Country">
+  						</div>
+					</div>
+				</div>
+				<div class="right-group">
+					<div class="form-group">
+						<label for="pincode" class="label-title">PinCode</label>
+						<input type="number" id="pincode" name="zip" class="form-input" placeholder="PinCode">
+					</div>
+				</div>
+			</div>
+			
+			<!-- Phone number -->
+			<div class="form-group">
+				<label for="phone" class="label-title">Mobile No.*</label>
+				<input type="tel" pattern="[789][0-9]{9}" id="phone" name="phone" class="form-input" placeholder="Phone Number" >
+				<span class="error" aria-live="polite"></span>
+			</div>
+			
+			<!-- Email -->
+			<div class="form-group">
+				<label for="email" class="label-title">Email *</label>
+				<input type="email" id="email" class="form-input" name="email" placeholder="Enter your email Id">
+				<span class="error" aria-live="polite"></span>
+			</div>
+			
+			<!-- Password -->
+			<div class="horizontal-group">
+				<div class="left-group">
+					<label for="password" class="label-title">Password *</label>
+					<input type="password" id="password" class="form-input" name="password" placeholder="Enter your password" >
+					<span class="error" aria-live="polite"></span>
+				</div>
+				<div class="right-group">
+					<label for="confirm-password" class="label-title">Confirm Password *</label>
+					<input type="password" id="confirm-password" class="form-input" name="confirm-password" placeholder="Enter your password again" >
+					<span class="error" aria-live="polite"></span>
+				</div>		
+				
+			</div>
+		</div>
+		
+		
+		<!-- form footer -->
+		<div class="form-footer">
+			<span>* required</span>
+  			<button type="submit" id="submitBtn" class="btn">Register</button>
+		</div>
+	</form> 
+	<script src="index.js"></script>
+</body>
+</html>
