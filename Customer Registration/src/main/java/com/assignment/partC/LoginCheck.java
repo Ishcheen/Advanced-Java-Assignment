@@ -58,13 +58,12 @@ public class LoginCheck extends HttpServlet {
 				Class.forName("org.postgresql.Driver");
 				Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Ishita@99");
 				String sql="select * from party as p join userlogin as u on p.partyid=u.partyid where u.userloginid='"+username+"' and u.password='"+password+"'";
-				
 				p=conn.prepareStatement(sql);
 				rs=p.executeQuery();
 				
-				
-				
 				if(rs.next() && username.equals(rs.getString("userloginid")) && password.equals(rs.getString("password"))) {
+					HttpSession session=request.getSession();
+					session.setAttribute("username", username);
 					RequestDispatcher req = request.getRequestDispatcher("Profile.jsp");
 					req.forward(request, response);
 				}
